@@ -4,6 +4,7 @@ import Head from 'next/head';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
+import '@/styles/globals.css';
 
 const muiCache = createCache({
   key: 'mui',
@@ -27,7 +28,6 @@ const App = ({ Component, emotionCache, pageProps }) => {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
         />
       </Head>
-
       <CssBaseline />
       <Component {...pageProps} />
     </CacheProvider>
